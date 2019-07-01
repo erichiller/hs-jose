@@ -135,24 +135,3 @@ test-suite tests
     , hspec
     , QuickCheck
     , quickcheck-instances
-
-executable jose-example
-  if !flag(demos)
-    buildable: False
-  hs-source-dirs: example
-  ghc-options:    -Wall
-  main-is:  Main.hs
-  other-modules:
-    KeyDB
-    JWS
-
-  build-depends:
-    base
-    , aeson
-    , bytestring
-    , lens
-    , mtl
-    , semigroups
-    , text
-    , unix
-    , jose
